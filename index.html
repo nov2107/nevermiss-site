@@ -3,66 +3,248 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NeverMiss Support</title>
+  <title>NeverMiss: urgent alerts that get through</title>
+  <meta name="description" content="Send an urgent alert to the few people you choose. It rings even on silent and Do Not Disturb. Join the waitlist for NeverMiss on iPhone.">
   <meta name="theme-color" content="#ECECEF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NeverMiss: when it can't wait, it gets through">
+  <meta property="og:description" content="Urgent alerts for the few people who matter most. Rings even on silent. Join the waitlist.">
+  <meta property="og:url" content="https://nov2107.github.io/nevermiss-site/">
+  <meta property="og:image" content="https://nov2107.github.io/nevermiss-site/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="landing">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <a class="brand" href="index.html">NeverMiss</a>
-  <nav aria-label="Site">
-    <a href="index.html" aria-current="page">Support</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-  </nav>
+
+<header class="site-header site-header--sticky" data-header>
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__icon" src="img/icon-96.png" width="32" height="32" alt="">
+      NeverMiss
+    </a>
+    <nav aria-label="Site" class="site-header__nav">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <a class="button button--small" href="#join" data-focus-email>Join <span class="hide-narrow">the </span>waitlist</a>
+  </div>
 </header>
 
 <main id="main">
-  <section class="card hero">
-    <h1>Support</h1>
-    <p>Questions, problems or feedback? Email us and we’ll usually reply within two business days.</p>
-    <div class="actions">
-      <a class="button" href="mailto:info.nevermiss@gmail.com">Email support</a>
-      <span class="email">info.nevermiss@gmail.com</span>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__text">
+      <p class="eyebrow">Coming soon to iPhone</p>
+      <h1 id="hero-title">When it can’t wait, it gets&nbsp;through.</h1>
+      <p class="lede">NeverMiss sends an urgent alert to the few people you choose. It rings even on silent and Do&nbsp;Not&nbsp;Disturb, so no one is left in trouble with no one to reach.</p>
+
+      <form class="waitlist" id="join" data-source="hero" novalidate>
+        <label class="visually-hidden" for="email-hero">Email address</label>
+        <div class="waitlist__row">
+          <input class="waitlist__input" id="email-hero" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="you@example.com" required>
+          <button class="button waitlist__button" type="submit">Join the waitlist</button>
+        </div>
+        <div class="waitlist__trap" aria-hidden="true">
+          <label for="website-hero">Leave this empty</label>
+          <input id="website-hero" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="waitlist__note" data-status role="status">One email when NeverMiss launches. Nothing else.</p>
+      </form>
+    </div>
+
+    <figure class="hero__phone">
+      <div class="phone">
+        <img src="img/alert-screen.jpg" width="720" height="1565"
+             alt="NeverMiss alert on the receiver’s iPhone: Dad, I’m not safe, followed or threatened, with his location on a map and a Call back button.">
+      </div>
+      <figcaption>What they see when you send an alert.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section" aria-labelledby="how-title">
+    <h2 class="section__title" id="how-title">How it works</h2>
+    <ol class="steps">
+      <li class="card step">
+        <span class="step__number" aria-hidden="true">1</span>
+        <h3>Choose your people</h3>
+        <p>Invite the few people you’d want in an emergency. Each of them accepts once, for the situations they agree to.</p>
+      </li>
+      <li class="card step">
+        <span class="step__number" aria-hidden="true">2</span>
+        <h3>Say what’s happening</h3>
+        <p>Medical emergency, not safe, home emergency, a really bad place, or after an attack. Two taps, no typing.</p>
+      </li>
+      <li class="card step">
+        <span class="step__number" aria-hidden="true">3</span>
+        <h3>Their phone rings</h3>
+        <p>Even on silent and Do Not Disturb. When it matters, they also see where you are, so they can call back or come.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section" aria-labelledby="trust-title">
+    <h2 class="section__title" id="trust-title">Only for real emergencies</h2>
+    <p class="section__intro">A sound that gets through silent is only worth something if nobody abuses it. So NeverMiss is strict.</p>
+    <ul class="card grouped">
+      <li>
+        <h3>Five situations, nothing else</h3>
+        <p>There’s no message box. Nobody can use it for “call me back” or “where are you?”.</p>
+      </li>
+      <li>
+        <h3>They say yes first</h3>
+        <p>You can only alert someone who accepted you, and only for the situations they chose.</p>
+      </li>
+      <li>
+        <h3>Leave or block any time</h3>
+        <p>Anyone can stop alerts from a person with one tap, and block them from inviting again.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="story-title">
+    <article class="card story">
+      <h2 id="story-title">Why I built NeverMiss</h2>
+      <p>One night, something happened near my home, the kind of moment where you need your family right away. I called, and nobody answered. Their phones were on silent, like most people’s are at night.</p>
+      <p>Silent mode did exactly what it’s meant to do: it kept everyone out, including me. I built NeverMiss so the few people who matter most can always get through, but only when it really counts.</p>
+      <p class="story__signature">Nov, founder</p>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="card notice">
+      <p class="urgent-title">NeverMiss is not an emergency service.</p>
+      <p>In an emergency, call your local emergency number first.</p>
     </div>
   </section>
 
-  <section class="card" aria-labelledby="not-emergency">
-    <p class="urgent-title" id="not-emergency">NeverMiss is not an emergency service.</p>
-    <p>In an emergency, call your local emergency number. In Israel, that’s Police 100, Magen David Adom 101 or Fire and Rescue 102.</p>
+  <section class="section closing" aria-labelledby="closing-title">
+    <div class="card closing__card">
+      <h2 id="closing-title">Be the first to have it</h2>
+      <p>NeverMiss is coming to iPhone. Join the waitlist and we’ll email you once, on launch day.</p>
+      <form class="waitlist" data-source="footer" novalidate>
+        <label class="visually-hidden" for="email-footer">Email address</label>
+        <div class="waitlist__row">
+          <input class="waitlist__input" id="email-footer" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="you@example.com" required>
+          <button class="button waitlist__button" type="submit">Join the waitlist</button>
+        </div>
+        <div class="waitlist__trap" aria-hidden="true">
+          <label for="website-footer">Leave this empty</label>
+          <input id="website-footer" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="waitlist__note" data-status role="status">No spam. Unsubscribe by replying to that one email.</p>
+      </form>
+    </div>
   </section>
-
-  <h2 class="section-label" id="faq">Common questions</h2>
-  <div class="card faq" role="group" aria-labelledby="faq">
-    <details>
-      <summary>Why can’t I send an alert to someone?</summary>
-      <div class="answer"><p>You can only alert people who have NeverMiss and who have saved your phone number in their contacts, and whom you have saved too. Ask them to open NeverMiss once so their contacts are up to date.</p></div>
-    </details>
-    <details>
-      <summary>I paid but the alert didn’t arrive.</summary>
-      <div class="answer"><p>If delivery fails, the app lets you try again without paying a second time. If that doesn’t work, email us with the time you sent it. Refunds for App Store purchases are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p></div>
-    </details>
-    <details>
-      <summary>I didn’t get my sign-in code by SMS.</summary>
-      <div class="answer"><p>Check the number and country code, wait a minute, and try again. Some carriers delay or block these messages. If it keeps happening, email us and tell us your carrier.</p></div>
-    </details>
-    <details>
-      <summary>How do I stop someone from alerting me?</summary>
-      <div class="answer"><p>In the app’s Contacts tab, tap <strong>Leave</strong> next to their name, and they can no longer alert you. To also stop them inviting you again, choose <strong>Leave and block</strong> (or <strong>Block</strong> on an invite). You can unblock them later in the same tab. To report someone, choose <strong>Leave, block and report</strong>, or email us.</p></div>
-    </details>
-    <details>
-      <summary>How do I delete my account?</summary>
-      <div class="answer"><p>In the app, go to Settings and tap Delete account. Your account and data are removed right away. See our <a href="privacy.html">Privacy Policy</a> for details.</p></div>
-    </details>
-  </div>
 </main>
 
 <footer>
-  <span>NeverMiss</span>
-  <a href="index.html">Support</a>
+  <span>© 2026 NeverMiss</span>
+  <a href="support.html">Support</a>
   <a href="privacy.html">Privacy Policy</a>
   <a href="terms.html">Terms of Use</a>
 </footer>
+
+<script>
+(() => {
+  // Public publishable key: the waitlist table only accepts new emails (see
+  // NeverMissSkillsv1/supabase/migrations/20261008120000_waitlist.sql).
+  const ENDPOINT = 'https://nolsftstnjvgbmjnlxcf.supabase.co/rest/v1/waitlist';
+  const KEY = 'sb_publishable_azOAO3CR55dzI-IAD7Ym9A_Ckuyjc5p';
+
+  // ?ref=reddit on a shared link tells you which post the sign-up came from.
+  const ref = new URLSearchParams(location.search).get('ref');
+  const forms = document.querySelectorAll('.waitlist');
+
+  function showDone(message) {
+    forms.forEach((form) => {
+      form.classList.add('is-done');
+      form.querySelector('[data-status]').textContent = message;
+    });
+  }
+
+  forms.forEach((form) => {
+    const input = form.querySelector('input[name="email"]');
+    const button = form.querySelector('button');
+    const status = form.querySelector('[data-status]');
+    const idleNote = status.textContent;
+    const idleLabel = button.textContent;
+
+    input.addEventListener('input', () => {
+      if (form.classList.contains('is-error')) {
+        form.classList.remove('is-error');
+        input.removeAttribute('aria-invalid');
+        status.textContent = idleNote;
+      }
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (form.classList.contains('is-sending') || form.classList.contains('is-done')) return;
+
+      // Bots fill every field; people never see this one.
+      if (form.querySelector('input[name="website"]').value) {
+        showDone('You’re on the list. We’ll email you on launch day.');
+        return;
+      }
+
+      const email = input.value.trim().toLowerCase();
+      if (!input.checkValidity() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        form.classList.add('is-error');
+        input.setAttribute('aria-invalid', 'true');
+        status.textContent = 'Enter a full email address, like name@example.com.';
+        input.focus();
+        return;
+      }
+
+      form.classList.add('is-sending');
+      button.disabled = true;
+      button.textContent = 'Joining…';
+
+      try {
+        const response = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { apikey: KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+          body: JSON.stringify({ email, source: (ref || form.dataset.source).slice(0, 40) }),
+        });
+        if (response.ok) {
+          showDone('You’re on the list. We’ll email you on launch day.');
+        } else if (response.status === 409) {
+          showDone('You’re already on the list. See you on launch day.');
+        } else {
+          throw new Error(String(response.status));
+        }
+      } catch {
+        form.classList.add('is-error');
+        status.textContent = 'That didn’t go through. Check your connection and try again, or email info.nevermiss@gmail.com.';
+      } finally {
+        form.classList.remove('is-sending');
+        button.disabled = false;
+        button.textContent = idleLabel;
+      }
+    });
+  });
+
+  // Header button: jump to the first form and put the cursor in the email field.
+  document.querySelectorAll('[data-focus-email]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const input = document.getElementById('email-hero');
+      if (!input || document.querySelector('.waitlist.is-done')) return;
+      event.preventDefault();
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      input.closest('form').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+      input.focus({ preventScroll: true });
+    });
+  });
+
+  // Hairline under the header only once the page has scrolled under it.
+  const header = document.querySelector('[data-header]');
+  const onScroll = () => header.toggleAttribute('data-scrolled', scrollY > 4);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
 </body>
 </html>
