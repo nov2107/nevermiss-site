@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="img/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body class="landing">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -55,7 +55,7 @@
     </div>
 
     <figure class="hero__phone">
-      <img class="device" src="img/alert-screen.jpg" width="700" height="1431"
+      <img class="device" src="img/alert-screen.jpg?v=2" width="700" height="1431"
            alt="NeverMiss alert on the receiver’s iPhone: Dad, I’m not safe, followed or threatened, with his location on a map and a Call back button.">
       <figcaption>What they see when you send an alert.</figcaption>
     </figure>
@@ -63,57 +63,64 @@
 
   <section class="section" aria-labelledby="how-title">
     <h2 class="section__title" id="how-title">How it works</h2>
-    <ol class="card grouped steps">
-      <li>
-        <span class="step__number" aria-hidden="true">1</span>
-        <div>
-          <h3>Choose your people</h3>
-          <p>Invite the few people you’d want in an emergency. Each of them accepts once, for the situations they agree to.</p>
+    <ol class="steps">
+      <li class="step">
+        <img class="step__shot" src="img/step-situation.jpg" width="600" height="1210" loading="lazy"
+             alt="The What’s happening? screen: Medical emergency, I’m not safe, Home emergency and After an attack.">
+        <div class="step__text">
+          <h3><span class="step__number">1</span>Pick what’s happening</h3>
+          <p>Medical, not safe, home emergency, or after an attack. No typing.</p>
         </div>
       </li>
-      <li>
-        <span class="step__number" aria-hidden="true">2</span>
-        <div>
-          <h3>Say what’s happening</h3>
-          <p>Medical emergency, not safe, home emergency, or after an attack. Two taps, no typing.</p>
+      <li class="step">
+        <img class="step__shot" src="img/step-confirm.jpg" width="600" height="1210" loading="lazy"
+             alt="Confirm screen: alerting Dad that I’m not safe, followed or threatened, with location attached and a red Send alert button.">
+        <div class="step__text">
+          <h3><span class="step__number">2</span>Pick who</h3>
+          <p>Only people who agreed to that situation show up. Add a detail if you have a second. Your location goes with it when it helps.</p>
         </div>
       </li>
-      <li>
-        <span class="step__number" aria-hidden="true">3</span>
-        <div>
-          <h3>It gets through</h3>
-          <p>Even on Do Not Disturb and Focus. On silent mode, it shows up and vibrates. When it matters, they also see where you are, so they can call back or come.</p>
+      <li class="step">
+        <img class="step__shot" src="img/step-sent.jpg" width="600" height="1210" loading="lazy"
+             alt="Alert sent screen for Dad, showing what he sees.">
+        <div class="step__text">
+          <h3><span class="step__number">3</span>Know it reached them</h3>
+          <p>It gets through their Do Not Disturb and Focus, and rings again if they don’t open it. You see when they’ve seen it, and they can answer “On my way”.</p>
         </div>
       </li>
     </ol>
   </section>
 
-  <section class="section" aria-labelledby="trust-title">
-    <h2 class="section__title" id="trust-title">Only for real emergencies</h2>
-    <p class="section__intro">An alert that gets through Do Not Disturb is only worth something if nobody abuses it. So NeverMiss is strict.</p>
-    <ul class="card grouped">
-      <li>
-        <h3>Five situations, nothing else</h3>
-        <p>There’s no message box. Nobody can use it for “call me back” or “where are you?”.</p>
-      </li>
-      <li>
-        <h3>They say yes first</h3>
-        <p>You can only alert someone who accepted you, and only for the situations they chose.</p>
-      </li>
-      <li>
-        <h3>Leave or block any time</h3>
-        <p>Anyone can stop alerts from a person with one tap, and block them from inviting again.</p>
-      </li>
-    </ul>
+  <section class="section" aria-labelledby="bypass-title">
+    <h2 class="section__title" id="bypass-title">Doesn’t my iPhone already do this?</h2>
+    <div class="answer">
+      <p>Partly. iPhone’s Emergency Bypass lets one contact’s calls and texts ring through, even on silent. It’s worth turning on.</p>
+      <p>But a call needs you to talk, and a text needs you to type. NeverMiss is for when you can’t: two taps tell them what’s wrong and where you are, and you know when they’ve seen it.</p>
+      <p class="answer__note">On silent mode, a NeverMiss alert still shows up on their screen, without sound.</p>
+    </div>
   </section>
 
-  <section class="section" aria-labelledby="story-title">
-    <article class="card story">
-      <h2 id="story-title">Why I built NeverMiss</h2>
-      <p>One night, something happened near my home, the kind of moment where you need your family right away. I called, and nobody answered. Their phones were on silent, like most people’s are at night.</p>
-      <p>Silent mode did exactly what it’s meant to do: it kept everyone out, including me. I built NeverMiss so the few people who matter most can get through, but only when it really counts. Today it gets through Do Not Disturb and Focus. I’ve asked Apple for permission to get through silent mode too.</p>
-      <p class="story__signature">Nov, founder</p>
-    </article>
+  <section class="section" aria-labelledby="trust-title">
+    <h2 class="section__title" id="trust-title">Only for real emergencies</h2>
+    <p class="section__intro">An alert that gets through Do Not Disturb is only worth something if nobody abuses it.</p>
+    <dl class="rules">
+      <div>
+        <dt>No message box</dt>
+        <dd>Nobody can use it for “call me back” or “where are you?”.</dd>
+      </div>
+      <div>
+        <dt>They say yes first</dt>
+        <dd>You can only alert someone who accepted you, and only for the situations they chose.</dd>
+      </div>
+      <div>
+        <dt>Leave or block any time</dt>
+        <dd>One tap stops alerts from a person and stops them inviting you again.</dd>
+      </div>
+      <div>
+        <dt>Limits on sending</dt>
+        <dd>One alert to the same person a minute, ten an hour.</dd>
+      </div>
+    </dl>
   </section>
 
   <section class="section">

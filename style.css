@@ -438,46 +438,70 @@ footer span { margin-inline-end: auto; }
 }
 
 /* ---------- How it works ---------- */
-/* One numbered list in a single card (was three boxes in a row). */
-.steps li { grid-template-columns: 1.5em 1fr; gap: 0 8px; }
-.steps li > div { display: grid; gap: 4px; }
+/* Real app screenshots, so the page shows the product instead of describing it. */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 24px;
+}
+.step { margin: 0; display: grid; align-content: start; gap: 16px; }
+.step__shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  outline: 1px solid var(--color-separator);
+  outline-offset: -1px;
+}
+.step__text { display: grid; gap: 4px; padding: 0 4px; }
+.step h3 { font-size: 1.0625rem; line-height: 1.3; font-weight: 650; margin: 0; }
 .step__number {
-  font-size: 0.9375rem;
-  font-weight: 700;
   font-variant-numeric: tabular-nums;
   color: var(--color-text-secondary);
+  margin-inline-end: 8px;
 }
-.grouped h3, .story h2, .closing__card h2 {
-  font-size: 1.0625rem;
-  line-height: 1.3;
-  font-weight: 650;
-  margin: 0;
+.step p { margin: 0; color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.5; }
+
+/* Phones: picture beside the words, one step per row. */
+@media (max-width: 640px) {
+  .steps { grid-template-columns: 1fr; gap: 28px; }
+  .step { grid-template-columns: 136px minmax(0, 1fr); align-items: center; gap: 20px; }
+  .step__shot { border-radius: 14px; }
 }
-.grouped p { margin: 0; color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.5; }
 
-/* ---------- Trust: iOS-style grouped list ---------- */
-.grouped { list-style: none; margin: 0; padding: 0; overflow: hidden; }
-.grouped li { margin: 0; padding: 18px 24px; display: grid; gap: 4px; }
-.grouped p { max-width: 64ch; }
-.grouped li + li { border-top: 1px solid var(--color-separator); }
+/* ---------- Doesn't my iPhone already do this? ---------- */
+.answer { padding: 0 4px; max-width: 60ch; }
+.answer p:last-child { margin-bottom: 0; }
+.answer__note { color: var(--color-text-secondary); font-size: 0.9375rem; }
 
-/* ---------- Story ---------- */
-.story { padding: 32px; }
-.story h2 { font-size: 1.25rem; margin-bottom: 14px; }
-.story p { max-width: 60ch; }
-.story__signature { font-weight: 600; margin-top: 18px; }
+/* ---------- Rules: plain list with hairlines, no card ---------- */
+.rules { margin: 0; border-top: 1px solid #D4D4DA; }
+.rules > div {
+  display: grid;
+  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+  gap: 4px 24px;
+  padding: 16px 4px;
+  border-bottom: 1px solid #D4D4DA;
+}
+.rules dt { font-weight: 650; }
+.rules dd { margin: 0; color: var(--color-text-secondary); }
+@media (max-width: 560px) {
+  .rules > div { grid-template-columns: 1fr; }
+}
 
 /* ---------- Notice + closing ---------- */
 .notice { margin-bottom: 0; }
 .closing { padding-bottom: 32px; }
 .closing__card { padding: 32px; display: grid; gap: 10px; }
-.closing__card h2 { font-size: 1.5rem; letter-spacing: -0.02em; font-weight: 700; }
+.closing__card h2 { font-size: 1.5rem; line-height: 1.3; letter-spacing: -0.02em; font-weight: 700; margin: 0; }
 .closing__card > p { color: var(--color-text-secondary); margin: 0 0 10px; max-width: 48ch; }
 
 .landing footer { max-width: calc(880px + 2 * var(--space-gutter)); }
 
 @media (max-width: 480px) {
   .section { padding-top: 44px; }
-  .story, .closing__card { padding: 24px 20px; }
-  .grouped li { padding: 16px 20px; }
+  .closing__card { padding: 24px 20px; }
 }
