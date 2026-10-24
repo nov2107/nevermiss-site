@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="img/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body class="landing">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -55,10 +55,18 @@
     </div>
 
     <figure class="hero__phone">
-      <img class="device" src="img/alert-screen.jpg?v=2" width="700" height="1431"
-           alt="NeverMiss alert on the receiver’s iPhone: Dad, I’m not safe, followed or threatened, with his location on a map and a Call back button.">
-      <figcaption>What they see when you send an alert.</figcaption>
+      <div class="hero__device">
+        <img class="device" src="img/alert-screen.jpg?v=2" width="700" height="1431"
+             alt="NeverMiss alert on the receiver’s iPhone: Dad, I’m not safe, followed or threatened, with his location on a map and a Call back button.">
+        <img class="lock-banner" src="img/lock-banner.png" width="772" height="154"
+             alt="Lock screen notification: Time Sensitive, Dad, Doesn’t feel safe.">
+      </div>
+      <figcaption>First on their lock screen. Then this, when they open it.</figcaption>
     </figure>
+  </section>
+
+  <section class="section problem" aria-label="The problem">
+    <p>Most people keep Do Not Disturb on at night. So the one call that really matters can go unanswered until morning.</p>
   </section>
 
   <section class="section" aria-labelledby="how-title">
@@ -91,15 +99,6 @@
     </ol>
   </section>
 
-  <section class="section" aria-labelledby="bypass-title">
-    <h2 class="section__title" id="bypass-title">Doesn’t my iPhone already do this?</h2>
-    <div class="answer">
-      <p>Partly. iPhone’s Emergency Bypass lets one contact’s calls and texts ring through, even on silent. It’s worth turning on.</p>
-      <p>But a call needs you to talk, and a text needs you to type. NeverMiss is for when you can’t: two taps tell them what’s wrong and where you are, and you know when they’ve seen it.</p>
-      <p class="answer__note">On silent mode, a NeverMiss alert still shows up on their screen, without sound.</p>
-    </div>
-  </section>
-
   <section class="section" aria-labelledby="trust-title">
     <h2 class="section__title" id="trust-title">Only for real emergencies</h2>
     <p class="section__intro">An alert that gets through Do Not Disturb is only worth something if nobody abuses it.</p>
@@ -121,6 +120,36 @@
         <dd>One alert to the same person a minute, ten an hour.</dd>
       </div>
     </dl>
+  </section>
+
+  <section class="section" aria-labelledby="faq-title">
+    <h2 class="section__title" id="faq-title">Questions</h2>
+    <div class="questions">
+      <details open>
+        <summary>Doesn’t my iPhone already do this?</summary>
+        <p>Partly. iPhone’s Emergency Bypass lets one contact’s calls and texts ring through, even on silent. It’s worth turning on. But a call needs you to talk, and a text needs you to type. NeverMiss is for when you can’t: two taps tell them what’s wrong and where you are, and you know when they’ve seen it.</p>
+      </details>
+      <details>
+        <summary>Does it ring when their phone is on silent?</summary>
+        <p>Not yet. It rings through Do Not Disturb and Focus. On silent mode, it still shows up on their screen, without sound. I’ve asked Apple for permission to ring through silent too.</p>
+      </details>
+      <details>
+        <summary>Is it free?</summary>
+        <p>Yes. Downloading NeverMiss and sending alerts is free, with no ads.</p>
+      </details>
+      <details>
+        <summary>Is there an Android version?</summary>
+        <p>Not yet. NeverMiss is for iPhone, and the people you alert need it on their iPhone too.</p>
+      </details>
+      <details>
+        <summary>Who sees my location?</summary>
+        <p>Only the person you alert, and only with a “Not safe”, “Home emergency” or “After an attack” alert, if you’ve allowed location. It’s never collected at any other time. <a href="privacy.html">Privacy policy</a></p>
+      </details>
+      <details>
+        <summary>What if I send one by mistake?</summary>
+        <p>You get three seconds to cancel before it goes. If it’s already sent, end it from the app and tell them it was a mistake. They get that straight away.</p>
+      </details>
+    </div>
   </section>
 
   <section class="section">
