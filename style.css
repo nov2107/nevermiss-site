@@ -38,7 +38,7 @@ body {
   inset-inline-start: var(--space-gutter);
   top: -100px;
   background: var(--color-bg-card);
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 10px;
   z-index: 1;
 }
@@ -61,7 +61,7 @@ body {
   flex-wrap: wrap;
 }
 .brand {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.1875rem;
   letter-spacing: -0.01em;
   color: var(--color-text);
@@ -100,7 +100,7 @@ p, li { text-wrap: pretty; }
 h1 {
   font-size: 2.125rem; /* 34px, iOS large title */
   line-height: 1.15;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0;
 }
@@ -114,7 +114,7 @@ h1 {
 h2 {
   font-size: 1.25rem;
   line-height: 1.3;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.01em;
   margin: 2em 0 0.4em;
 }
@@ -164,7 +164,7 @@ a {
 /* The emergency warning: the one place red appears. */
 .urgent-title {
   color: var(--color-urgent-text);
-  font-weight: 650;
+  font-weight: 600;
   margin-bottom: 0.3em;
 }
 
@@ -347,10 +347,10 @@ footer span { margin-inline-end: auto; }
   font-size: 1.75rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 4px 16px;
 }
-.section__intro { color: var(--color-text-secondary); margin: -6px 4px 16px; max-width: 56ch; }
+.section__intro { color: var(--color-text-secondary); margin: -4px 4px 16px; max-width: 56ch; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -420,7 +420,7 @@ footer span { margin-inline-end: auto; }
 .waitlist__note {
   font-size: 0.875rem;
   color: var(--color-text-secondary);
-  margin: 10px 0 0 20px;
+  margin: 8px 0 0 20px;
   min-height: 1.4em;
 }
 .waitlist.is-error .waitlist__input { border-color: var(--color-urgent-text); }
@@ -431,7 +431,7 @@ footer span { margin-inline-end: auto; }
   font-size: 1.0625rem;
   font-weight: 600;
   color: var(--color-text);
-  padding: 14px 20px;
+  padding: 16px 20px;
   border-radius: 16px;
   background: var(--color-accent-solid);
 }
@@ -464,7 +464,7 @@ footer span { margin-inline-end: auto; }
 /* Each screenshot already sits in the same iPhone frame as the hero picture. */
 .step__shot { display: block; width: 100%; max-width: 230px; height: auto; }
 .step__text { display: grid; gap: 4px; padding: 0 4px; }
-.step h3 { font-size: 1.0625rem; line-height: 1.3; font-weight: 650; margin: 0; }
+.step h3 { font-size: 1.0625rem; line-height: 1.3; font-weight: 600; margin: 0; }
 .step__number {
   font-variant-numeric: tabular-nums;
   color: var(--color-text-secondary);
@@ -483,7 +483,7 @@ footer span { margin-inline-end: auto; }
   font-size: 1.375rem;
   line-height: 1.4;
   letter-spacing: -0.01em;
-  font-weight: 600;
+  font-weight: 500;
   max-width: 30ch;
   margin: 0 4px;
 }
@@ -499,7 +499,7 @@ footer span { margin-inline-end: auto; }
   justify-content: space-between;
   gap: 16px;
   padding: 16px 4px;
-  font-weight: 650;
+  font-weight: 500;
   -webkit-tap-highlight-color: transparent;
 }
 .questions summary::-webkit-details-marker { display: none; }
@@ -518,7 +518,7 @@ footer span { margin-inline-end: auto; }
   .questions summary::after { transition: rotate 200ms ease-out, translate 200ms ease-out; }
 }
 .questions summary:focus-visible { outline-offset: -2px; }
-.questions details p { margin: -4px 4px 18px; max-width: 62ch; color: var(--color-text-secondary); }
+.questions details p { margin: -4px 4px 20px; max-width: 62ch; color: var(--color-text-secondary); }
 
 /* ---------- Rules: plain list with hairlines, no card ---------- */
 .rules { margin: 0; border-top: 1px solid #D4D4DA; }
@@ -529,7 +529,7 @@ footer span { margin-inline-end: auto; }
   padding: 16px 4px;
   border-bottom: 1px solid #D4D4DA;
 }
-.rules dt { font-weight: 650; }
+.rules dt { font-weight: 500; }
 .rules dd { margin: 0; color: var(--color-text-secondary); }
 @media (max-width: 560px) {
   .rules > div { grid-template-columns: 1fr; }
@@ -538,9 +538,9 @@ footer span { margin-inline-end: auto; }
 /* ---------- Notice + closing ---------- */
 .notice { margin-bottom: 0; }
 .closing { padding-bottom: 32px; }
-.closing__card { padding: 32px; display: grid; gap: 10px; }
-.closing__card h2 { font-size: 1.5rem; line-height: 1.3; letter-spacing: -0.02em; font-weight: 700; margin: 0; }
-.closing__card > p { color: var(--color-text-secondary); margin: 0 0 10px; max-width: 48ch; }
+.closing__card { padding: 32px; display: grid; gap: 12px; }
+.closing__card h2 { font-size: 1.5rem; line-height: 1.3; letter-spacing: -0.02em; font-weight: 600; margin: 0; }
+.closing__card > p { color: var(--color-text-secondary); margin: 0 0 8px; max-width: 48ch; }
 
 .landing footer { max-width: calc(880px + 2 * var(--space-gutter)); }
 
