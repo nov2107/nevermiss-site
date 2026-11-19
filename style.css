@@ -378,23 +378,11 @@ footer span { margin-inline-end: auto; }
 .hero__phone figcaption { font-size: 0.875rem; color: var(--color-text-secondary); }
 /* Apple's official iPhone 17 bezel (Apple Design Resources) around a real simulator screenshot. */
 .device { display: block; width: 300px; max-width: 100%; height: auto; }
-/* The real notification (simulator push, same text the server sends), floating
-   over the phone the way it arrives before they open the app. */
 .hero__device { position: relative; }
-.lock-banner {
-  position: absolute;
-  top: 9%;
-  left: -44px;
-  width: 330px;
-  height: auto;
-  border-radius: 21px;
-  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.06), 0 8px 24px rgb(0 0 0 / 0.10);
-}
 
 @media (max-width: 820px) {
   .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 36px; }
   .device { width: 270px; }
-  .lock-banner { left: -20px; width: 300px; }
 }
 
 /* ---------- Waitlist form ---------- */
